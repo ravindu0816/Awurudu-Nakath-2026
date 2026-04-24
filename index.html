@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>අලුත් අවුරුදු නැකැත් | Aluth Avurudu Nakath (2026)</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Sinhala:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #c9922a;
+    --gold-light: #f0c060;
+    --gold-pale: #fdf3dc;
+    --crimson: #8b1a1a;
+    --crimson-dark: #5c0f0f;
+    --saffron: #e07b1a;
+    --cream: #fef9ef;
+    --green: #2d5a27;
+    --green-light: #4a8c42;
+    --text-dark: #1a0a00;
+    --text-mid: #4a2c00;
+    --shadow-gold: rgba(201,146,42,0.35);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Crimson Pro', serif;
+    background: var(--cream);
+    color: var(--text-dark);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* =========== BACKGROUND PATTERN =========== */
+  .bg-pattern {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 50% -10%, rgba(201,146,42,0.18) 0%, transparent 70%),
+      radial-gradient(ellipse 60% 40% at 100% 100%, rgba(139,26,26,0.12) 0%, transparent 60%),
+      radial-gradient(ellipse 50% 50% at 0% 80%, rgba(45,90,39,0.10) 0%, transparent 60%),
+      var(--cream);
+    pointer-events: none;
+  }
+
+  .bg-pattern::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c9922a' fill-opacity='0.06'%3E%3Cpath d='M30 0 L35 10 L30 8 L25 10 Z M30 60 L35 50 L30 52 L25 50 Z M0 30 L10 25 L8 30 L10 35 Z M60 30 L50 25 L52 30 L50 35 Z'/%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    opacity: 0.5;
+  }
+
+  .content { position: relative; z-index: 1; }
+
+  /* =========== HEADER =========== */
+  header {
+    text-align: center;
+    padding: 50px 20px 30px;
+    position: relative;
+  }
+
+  .header-ornament {
+    font-size: 2rem;
+    color: var(--gold);
+    letter-spacing: 12px;
+    margin-bottom: 10px;
+    animation: shimmer 3s ease-in-out infinite;
+  }
+
+  @keyframes shimmer {
+    0%,100% { opacity: 0.7; }
+    50% { opacity: 1; }
+  }
+
+  .year-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--crimson-dark), var(--crimson));
+    color: var(--gold-light);
+    font-family: 'Playfair Display', serif;
+    font-size: 0.9rem;
+    letter-spacing: 4px;
+    padding: 6px 24px;
+    border-radius: 2px;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    border: 1px solid var(--gold);
+  }
+
+  h1.main-title {
+    font-family: 'Noto Serif Sinhala', serif;
+    font-size: clamp(2rem, 6vw, 3.8rem);
+    font-weight: 700;
+    color: var(--crimson-dark);
+    line-height: 1.2;
+    text-shadow: 2px 2px 0 rgba(201,146,42,0.2);
+  }
+
+  h1.main-title span {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.1rem, 3vw, 1.6rem);
+    color: var(--gold);
+    font-style: italic;
+    font-weight: 400;
+    margin-top: 6px;
+  }
+
+  .header-divider {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 20px auto;
+    max-width: 500px;
+  }
+
+  .header-divider::before,
+  .header-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  }
+
+  .lotus-icon { color: var(--gold); font-size: 1.5rem; }
+
+  /* =========== NEW YEAR COUNTDOWN HERO =========== */
+  .ny-countdown-hero {
+    background: linear-gradient(135deg, var(--crimson-dark) 0%, var(--crimson) 60%, #a03030 100%);
+    border: 3px solid var(--gold);
+    border-radius: 12px;
+    max-width: 820px;
+    margin: 0 auto 40px;
+    padding: 30px 24px;
+    text-align: center;
+    box-shadow: 0 8px 40px rgba(139,26,26,0.35), inset 0 1px 0 rgba(255,255,255,0.1);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .ny-countdown-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='1.5' fill='%23c9922a' fill-opacity='0.15'/%3E%3C/svg%3E");
+    pointer-events: none;
+  }
+
+  .ny-label {
+    font-family: 'Noto Serif Sinhala', serif;
+    color: var(--gold-light);
+    font-size: 1rem;
+    letter-spacing: 2px;
+    margin-bottom: 4px;
+    opacity: 0.9;
+  }
+
+  .ny-label-en {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: rgba(240,192,96,0.75);
+    font-size: 0.85rem;
+    margin-bottom: 18px;
+  }
+
+  .ny-date-info {
+    color: var(--gold-light);
+    font-size: 1.05rem;
+    margin-bottom: 20px;
+    font-family: 'Crimson Pro', serif;
+  }
+
+  .ny-date-info strong {
+    color: #fff;
+    font-size: 1.15rem;
+  }
+
+  .countdown-grid {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .cd-unit {
+    background: rgba(0,0,0,0.3);
+    border: 1px solid rgba(201,146,42,0.4);
+    border-radius: 8px;
+    padding: 14px 18px;
+    min-width: 80px;
+    backdrop-filter: blur(4px);
+  }
+
+  .cd-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--gold-light);
+    line-height: 1;
+    display: block;
+  }
+
+  .cd-label {
+    font-size: 0.7rem;
+    color: rgba(240,192,96,0.7);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: block;
+    margin-top: 4px;
+  }
+
+  .cd-label-si {
+    font-family: 'Noto Serif Sinhala', serif;
+    font-size: 0.7rem;
+    color: rgba(240,192,96,0.6);
+    display: block;
+  }
+
+  /* =========== PAGE SECTIONS =========== */
+  #home-page, #detail-page { display: none; }
+  #home-page.active, #detail-page.active { display: block; }
+
+  /* =========== NAKATH GRID =========== */
+  .section-label {
+    text-align: center;
+    margin-bottom: 28px;
+  }
+
+  .section-label h2 {
+    font-family: 'Noto Serif Sinhala', serif;
+    font-size: clamp(1.4rem, 4vw, 2rem);
+    color: var(--crimson-dark);
+    font-weight: 700;
+  }
+
+  .section-label h2 span {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+    color: var(--gold);
+    font-weight: 400;
+    margin-top: 4px;
+  }
+
+  .nakath-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px 60px;
+  }
+
+  .nakath-card {
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid rgba(201,146,42,0.25);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.25s, box-shadow 0.25s;
+    box-shadow: 0 3px 16px rgba(0,0,0,0.07);
+    position: relative;
+  }
+
+  .nakath-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 32px rgba(139,26,26,0.18);
+  }
+
+  .card-top {
+    padding: 18px 20px 14px;
+    background: linear-gradient(135deg, var(--crimson-dark), #7a1010);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card-top::after {
+    content: '';
+    position: absolute;
+    right: -20px; top: -20px;
+    width: 80px; height: 80px;
+    border-radius: 50%;
+    background: rgba(201,146,42,0.12);
+  }
+
+  .card-number {
+    position: absolute;
+    top: 12px; right: 16px;
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: rgba(201,146,42,0.25);
+    font-weight: 700;
+  }
+
+  .card-icon {
+    font-size: 1.6rem;
+    margin-bottom: 8px;
+  }
+
+  .card-title-si {
+    font-family: 'Noto Serif Sinhala', serif;
+    font-size: 1.1rem;
+    color: var(--gold-light);
+    font-weight: 600;
+    line-height: 1.4;
+  }
+
+  .card-title-en {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 0.85rem;
+    color: rgba(240,192,96,0.7);
+    margin-top: 2px;
+  }
+
+  .card-body {
+    padding: 16px 20px 18px;
+  }
+
+  .card-datetime {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    color: var(--text-mid);
+    margin-bottom: 8px;
+  }
+
+  .card-datetime .dt-icon { font-size: 1rem; }
+
+  .card-countdown-mini {
+    background: var(--gold-pale);
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-family: 'Playfair Display', serif;
+    font-size: 0.85rem;
+    color: var(--crimson-dark);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 12px;
+  }
+
+  .card-countdown-mini.past {
+    background: #f0f5f0;
+    color: var(--green);
+  }
+
+  .card-teaser {
+    font-size: 0.88rem;
+    color: #5a4020;
+    line-height: 1.6;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .card-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 12px;
+    color: var(--gold);
+    font-size: 0.8rem;
+    font-family: 'Crimson Pro', serif;
+    gap: 4px;
+    transition: gap 0.2s;
+  }
+
+  .nakath-card:hover .card-arrow { gap: 8px; }
+
+  /* =========== DETAIL PAGE =========== */
+  #detail-page {
+    min-height: 100vh;
+  }
+
+  .back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    border: 1px solid var(--gold);
+    color: var(--crimson-dark);
+    font-family: 'Crimson Pro', serif;
+    font-size: 1rem;
+    padding: 8px 20px;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin: 30px 0 0 24px;
+  }
+
+  .back-btn:hover {
+    background: var(--crimson-dark);
+    color: var(--gold-light);
+    border-color: var(--crimson-dark);
+  }
+
+  .detail-hero {
+    background: linear-gradient(135deg, var(--crimson-dark), #7a1010, var(--saffron));
+    padding: 40px 24px 50px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .detail-hero::before {
+    content: '❁';
+    position: absolute;
+    font-size: 20rem;
+    color: rgba(255,255,255,0.03);
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    pointer-events: none;
+  }
+
+  .detail-hero-icon {
+    font-size: 3rem;
+    margin-bottom: 12px;
+  }
+
+  .detail-title-si {
+    font-family: 'Noto Serif Sinhala', serif;
+    font-size: clamp(1.6rem, 5vw, 2.8rem);
+    color: var(--gold-light);
+    font-weight: 700;
+    line-height: 1.3;
+  }
+
+  .detail-title-en {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: clamp(1rem, 3vw, 1.4rem);
+    color: rgba(240,192,96,0.75);
+    margin-top: 8px;
+  }
+
+  .detail-datetime-badge {
+    display: inline-flex;
+    gap: 12px;
+    align-items: center;
+    background: rgba(0,0,0,0.3);
+    border: 1px solid rgba(201,146,42,0.4);
+    border-radius: 40px;
+    padding: 10px 24px;
+    margin-top: 20px;
+    color: var(--gold-light);
+    font-size: 1rem;
+    font-family: 'Crimson Pro', serif;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* Big countdown on detail page */
+  .detail-countdown {
+    max-width: 700px;
+    margin: -28px auto 0;
+    background: #fff;
+    border: 2px solid var(--gold);
+    border-radius: 12px;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.12);
+    padding: 28px 20px 24px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+  }
+
+  .detail-countdown h3 {
+    font-family: 'Noto Serif Sinhala', serif;
+    font-size: 1rem;
+    color: var(--crimson-dark);
+    margin-bottom: 4px;
+  }
+
+  .detail-countdown h3 span {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 0.85rem;
+    color: var(--gold);
+    display: block;
+  }
+
+  .big-cd-grid {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 16px;
+  }
+
+  .big-cd-unit {
+    background: linear-gradient(135deg, var(--crimson-dark), var(--crimson));
+    border-radius: 10px;
+    padding: 18px 20px;
+    min-width: 90px;
+    box-shadow: 0 4px 16px rgba(139,26,26,0.2);
+  }
+
+  .big-cd-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--gold-light);
+    line-height: 1;
+    display: block;
+  }
+
+  .big-cd-label {
+    font-size: 0.65rem;
+    color: rgba(240,192,96,0.7);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: block;
+    margin-top: 4px;
+  }
+
+  .big-cd-label-si {
+    font-family: 'Noto Serif Sinhala', serif;
+    font-size: 0.7rem;
+    color: rgba(240,192,96,0.6);
+    display: block;
+  }
+
+  .passed-badge {
+    display: inline-block;
+    background: var(--green);
+    color: #fff;
+    border-radius: 40px;
+    padding: 8px 24px;
+    font-family: 'Noto Serif Sinhala', serif;
+    font-size: 1rem;
+    margin-top: 16px;
+  }
+
+  /* Detail info section */
+  .detail-info {
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 0 20px 60px;
+  }
+
+  .detail-info-card {
+    background: #fff;
+    border: 1px solid rgba(201,146,42,0.2);
+    border-radius: 10px;
+    padding: 28px;
+    box-shadow: 0 3px 16px rgba(0,0,0,0.06);
+    margin-bottom: 20px;
+  }
+
+  .info-section-title {
+    font-family: 'Noto Serif Sinhala', serif;
+    font-size: 1.1rem;
+    color: var(--crimson-dark);
+    font-weight: 600;
+    border-bottom: 2px solid var(--gold-pale);
+    padding-bottom: 10px;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .info-section-title span.en {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 0.85rem;
+    color: var(--gold);
+    font-weight: 400;
+  }
+
+  .detail-text-si {
+    font-family: 'Noto Serif Sinhala', serif;
+    font-size: 1rem;
+    color: #2a1a00;
+    line-height: 1.9;
+    margin-bottom: 12px;
+  }
+
+  .detail-text-en {
+    font-family: 'Crimson Pro', serif;
+    font-size: 1rem;
+    color: #4a3010;
+    line-height: 1.8;
+    border-left: 3px solid var(--gold-pale);
+    padding-left: 14px;
+    font-style: italic;
+  }
+
+  .dress-colors {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+  }
+
+  .color-chip {
+    padding: 6px 16px;
+    border-radius: 40px;
+    font-size: 0.85rem;
+    font-family: 'Crimson Pro', serif;
+    border: 1px solid rgba(0,0,0,0.1);
+    font-style: italic;
+  }
+
+  /* =========== FOOTER =========== */
+  footer {
+    text-align: center;
+    padding: 30px 20px;
+    border-top: 1px solid rgba(201,146,42,0.2);
+    color: var(--text-mid);
+    font-size: 0.85rem;
+    font-family: 'Noto Serif Sinhala', serif;
+  }
+
+  footer span { color: var(--gold); }
+
+  /* =========== RESPONSIVE =========== */
+  @media (max-width: 480px) {
+    .cd-unit { min-width: 64px; padding: 10px 12px; }
+    .cd-num { font-size: 1.9rem; }
+    .big-cd-unit { min-width: 70px; padding: 14px 12px; }
+    .big-cd-num { font-size: 2.2rem; }
+  }
+
+  /* Animations */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .nakath-card {
+    animation: fadeUp 0.5s ease both;
+  }
+
+  .nakath-card:nth-child(1) { animation-delay: 0.05s }
+  .nakath-card:nth-child(2) { animation-delay: 0.1s }
+  .nakath-card:nth-child(3) { animation-delay: 0.15s }
+  .nakath-card:nth-child(4) { animation-delay: 0.2s }
+  .nakath-card:nth-child(5) { animation-delay: 0.25s }
+  .nakath-card:nth-child(6) { animation-delay: 0.3s }
+  .nakath-card:nth-child(7) { animation-delay: 0.35s }
+  .nakath-card:nth-child(8) { animation-delay: 0.4s }
+  .nakath-card:nth-child(9) { animation-delay: 0.45s }
+  .nakath-card:nth-child(10) { animation-delay: 0.5s }
+</style>
+</head>
+<body>
+
+<div class="bg-pattern"></div>
+
+<div class="content">
+
+<!-- ===================== HOME PAGE ===================== -->
+<div id="home-page" class="active">
+
+  <header>
+    <div class="header-ornament">✦ ✿ ✦</div>
+    <div class="year-badge">ශක වර්ෂ 1948 | Saka 1948 · 2026</div>
+    <h1 class="main-title">
+      අලුත් අවුරුදු නැකැත් සීට්ටුව
+      <span>Aluth Avurudu Nakath Schedule</span>
+    </h1>
+    <div class="header-divider"><div class="lotus-icon">❁</div></div>
+    <p style="font-family:'Crimson Pro',serif;font-size:1rem;color:var(--text-mid);max-width:600px;margin:0 auto;">
+      සිංහල හා දෙමළ අලුත් අවුරුදු — Sinhala & Tamil New Year 2026
+    </p>
+  </header>
+
+  <!-- NEW YEAR MAIN COUNTDOWN -->
+  <div style="max-width:860px;margin:0 auto;padding:0 20px 20px;">
+    <div class="ny-countdown-hero">
+      <div class="ny-label">සිංහල අලුත් අවුරුද්ද උදාවීමට තව</div>
+      <div class="ny-label-en">Sinhala New Year Dawns In</div>
+      <div class="ny-date-info">
+        <strong>අප්‍රේල් 14, 2026 | April 14, 2026</strong> &nbsp;·&nbsp; පෙ.ව. 9:32 | 9:32 AM
+      </div>
+      <div class="countdown-grid">
+        <div class="cd-unit">
+          <span class="cd-num" id="ny-days">00</span>
+          <span class="cd-label">Days</span>
+          <span class="cd-label-si">දිනයන්</span>
+        </div>
+        <div class="cd-unit">
+          <span class="cd-num" id="ny-hours">00</span>
+          <span class="cd-label">Hours</span>
+          <span class="cd-label-si">පැය</span>
+        </div>
+        <div class="cd-unit">
+          <span class="cd-num" id="ny-mins">00</span>
+          <span class="cd-label">Minutes</span>
+          <span class="cd-label-si">මිනිත්තු</span>
+        </div>
+        <div class="cd-unit">
+          <span class="cd-num" id="ny-secs">00</span>
+          <span class="cd-label">Seconds</span>
+          <span class="cd-label-si">තත්පර</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAKATH LIST TITLE -->
+  <div class="section-label" style="padding:0 20px;">
+    <h2>නැකැත් විස්තර <span>Click a Nakath to see full details & countdown</span></h2>
+  </div>
+
+  <!-- NAKATH CARDS GRID -->
+  <div class="nakath-grid" id="nakath-grid">
+    <!-- Cards injected by JS -->
+  </div>
+
+</div><!-- end #home-page -->
+
+
+<!-- ===================== DETAIL PAGE ===================== -->
+<div id="detail-page">
+  <button class="back-btn" onclick="goHome()">← ආපසු | Back</button>
+
+  <div class="detail-hero" id="detail-hero">
+    <div class="detail-hero-icon" id="d-icon"></div>
+    <div class="detail-title-si" id="d-title-si"></div>
+    <div class="detail-title-en" id="d-title-en"></div>
+    <div class="detail-datetime-badge">
+      <span>📅</span>
+      <span id="d-date"></span>
+      <span>·</span>
+      <span>⏰</span>
+      <span id="d-time"></span>
+    </div>
+  </div>
+
+  <!-- BIG COUNTDOWN -->
+  <div class="detail-countdown" style="margin-left:auto;margin-right:auto;">
+    <h3>නැකැත් ආරම්භ වීමට <span>Time remaining to this nakath</span></h3>
+    <div class="big-cd-grid" id="detail-cd-grid">
+      <div class="big-cd-unit">
+        <span class="big-cd-num" id="d-days">00</span>
+        <span class="big-cd-label">Days</span>
+        <span class="big-cd-label-si">දිනයන්</span>
+      </div>
+      <div class="big-cd-unit">
+        <span class="big-cd-num" id="d-hours">00</span>
+        <span class="big-cd-label">Hours</span>
+        <span class="big-cd-label-si">පැය</span>
+      </div>
+      <div class="big-cd-unit">
+        <span class="big-cd-num" id="d-mins">00</span>
+        <span class="big-cd-label">Minutes</span>
+        <span class="big-cd-label-si">මිනිත්තු</span>
+      </div>
+      <div class="big-cd-unit">
+        <span class="big-cd-num" id="d-secs">00</span>
+        <span class="big-cd-label">Seconds</span>
+        <span class="big-cd-label-si">තත්පර</span>
+      </div>
+    </div>
+    <div id="d-passed" style="display:none;" class="passed-badge">✓ මෙම නැකැත් ගතවී ඇත | This nakath has passed</div>
+  </div>
+
+  <!-- DETAIL INFO -->
+  <div class="detail-info" id="detail-info-area">
+    <!-- Injected by JS -->
+  </div>
+
+</div><!-- end #detail-page -->
+
+<footer>
+  <div class="header-ornament" style="font-size:1.2rem;letter-spacing:8px;">✦ ❁ ✦</div>
+  <div style="margin-top:8px;">
+    සිංහල හා දෙමළ අලුත් අවුරුදු <span>2026</span> — Sinhala & Tamil New Year <span>2026</span>
+  </div>
+  <div style="margin-top:4px;font-size:0.8rem;color:#9a7040;">
+    නිල නැකැත් ලේඛනය ඇසුරෙන් | Based on official nakath schedule
+  </div>
+</footer>
+
+</div><!-- end .content -->
+
+<script>
+// ===================== DATA =====================
+// All times in Sri Lanka time (UTC+5:30)
+// Format: new Date(year, month-1, day, hour, minute)
+const nakath = [
+  {
+    id: 0,
+    icon: '🌙',
+    si: 'නව සඳ බැලීම',
+    en: 'New Moon Sighting',
+    date: new Date(2026, 2, 20, 0, 0), // March 20 (approximate new moon)
+    displayDate: 'මාර්තු 20 | March 20',
+    displayTime: '',
+    descSi: 'අභිනව සූර්ය වර්ෂය ආරම්භ වීම සනිටුහන් කරන නව සඳ බැලීම මාර්තු මස 20වන සිකුරාදා දිනද, ඉන්පසු නව සූර්ය වර්ෂය සඳහා අප්‍රේල් මස 19 වන ඉරිදා දිනද නව සඳ බැලීම මැනවි.',
+    descEn: 'The new moon sighting marks the beginning of the new solar year. The new moon is observed on Friday, March 20, and again on Sunday, April 19 for the new solar year.',
+    colors: [],
+    colorNote: ''
+  },
+  {
+    id: 1,
+    icon: '🪔',
+    si: 'තෙල් වළං ලිප තැබීම',
+    en: 'Lighting the Hearth (Helvalan Lipa)',
+    date: new Date(2026, 3, 13, 11, 8), // April 13, 11:08 AM
+    displayDate: 'අප්‍රේල් 13 | April 13, 2026',
+    displayTime: 'පෙ.ව. 11:08 | 11:08 AM',
+    descSi: 'අප්‍රේල් මස 05 වන ඉරිදා දින පූර්වාහා 11.08 ට රතු සහ කහ මිශ්‍ර හෝ තඹවත් පැහැයෙන් යුත් වස්ත්‍රයෙන් සැරසී දකුණු දිසාව බලා ලිප් බැඳ ගිනිමොළවා තෙල් වළං ලිප තබා අවුරුදු කැවිලි වර්ග පිස ගැනීම මැනවි.',
+    descEn: 'On April 13, at 11:08 AM, dressed in red and yellow mixed or copper-colored garments, face south, set up the hearth, light the fire, and prepare traditional new year foods.',
+    colors: ['#cc3300', '#ffcc00'],
+    colorNames: ['රතු | Red', 'කහ | Yellow']
+  },
+  {
+    id: 2,
+    icon: '🕍',
+    si: 'පරණ අවුරුද්ද සඳහා ස්නානය',
+    en: 'Bathing for the Old Year',
+    date: new Date(2026, 3, 13, 12, 0),
+    displayDate: 'අප්‍රේල් 13 | April 13, 2026',
+    displayTime: 'දිවා | Daytime',
+    descSi: 'අප්‍රේල් මස 13 වන සඳුදා දිනා දිඹුල් පත් යුශ මිශ්‍ර නානු ගා ස්නාණය කොට ඉෂ්ට දෙවතා අනුස්මරණෙයේ යේදී වාසය මැනවි.',
+    descEn: 'On Monday, April 13, bathe with herbal preparations, meditate upon the divine, and spend time in devotion and remembrance.',
+    colors: [],
+    colorNote: ''
+  },
+  {
+    id: 3,
+    icon: '🎊',
+    si: 'අලුත් අවුරුද්ද උදාව',
+    en: 'New Year Dawns',
+    date: new Date(2026, 3, 14, 9, 32), // April 14, 9:32 AM
+    displayDate: 'අප්‍රේල් 14 | April 14, 2026',
+    displayTime: 'පෙ.ව. 9:32 | 9:32 AM',
+    descSi: 'අප්‍රේල් මස 14 වන අඟහරුවාදා දිනා පූර්වාහා 09.32 ට සිංහල අලුත් අවුරුද්ද උදාවේ.',
+    descEn: 'On Tuesday, April 14 at 9:32 AM, the Sinhala New Year dawns. This is the auspicious moment marking the transition of the sun into Aries (Mesha Sankramana).',
+    colors: [],
+    colorNote: ''
+  },
+  {
+    id: 4,
+    icon: '🙏',
+    si: 'පුණ්ය කාලය',
+    en: 'Punya Kalaya (Auspicious Period)',
+    date: new Date(2026, 3, 14, 3, 8), // April 14, 3:08 AM
+    displayDate: 'අප්‍රේල් 14 | April 14, 2026',
+    displayTime: 'පෙ.ව. 3:08 සිට ප.ව. 3:56 | 3:08 AM – 3:56 PM',
+    descSi: 'අප්‍රේල් මස 14 වන අඟහරුවාදා පූර්වභාග 03.08 සිට එම දා අපරභාග 03.56 දක්වා පුණ්‍ය කාලය බැවින් ඊට පළමුව ආහාර පාන ගෙන සියලු වැඩ අතහැර ආගමික වතාවත්, ආධ්‍යාත්මික කටයුතු, දානමය පුණ්‍ය ක්‍රියා සහ පුණ්‍යකාල චාරිත්‍රයන් හි නිරතවීමත් ආහාර පිසීම, අනුභවය, වැඩ ඇල්ලීම හා ගණුදෙනු කිරීම ආදී නැකැත් චාරිත්‍ර විධි පහත පරිදි ඉටුකිරීමත් මැනවි.',
+    descEn: 'From 3:08 AM to 3:56 PM on April 14, this is the auspicious Punya Kalaya period. During this time, observe all religious customs, prepare and share food, engage in charitable deeds, and conduct all blessed activities with devotion.',
+    colors: [],
+    colorNote: ''
+  },
+  {
+    id: 5,
+    icon: '🍚',
+    si: 'ආහාර පිසීම (ලිප ගිනි දැල්වීම)',
+    en: 'Cooking Food (Lighting the Stove)',
+    date: new Date(2026, 3, 14, 10, 41), // April 14, 10:51 AM
+    displayDate: 'අප්‍රේල් 14 | April 14, 2026',
+    displayTime: 'පෙ.ව. 10:41 | 10:41 AM',
+    descSi: 'අප්‍රේල් මස 14 වන අඟහරුවාදා පූර්වභාග 10.41 ට රක්ත වර්ණ වස්ත්‍රාභරණයෙන් සැරසී දකුණු දිශාව බලා ලිප් බැඳ ගිනි මොළවා කිරිබතක් ද කැවිලි වර්ගයක් ද දී කිරි සහ විළඳ ද පිළියෙල කරගැනීම මැනවි.',
+    descEn: 'At 10:41 AM on April 14, dressed in red garments, facing south, light the stove and prepare kiribath (milk rice) and traditional sweet meats for the New Year.',
+    colors: ['#cc3300'],
+    colorNames: ['රතු | Red']
+  },
+  {
+    id: 6,
+    icon: '🛒',
+    si: 'වැඩ ඇල්ලීම, ගනුදෙනු කිරීම හා ආහාර අනුභවය',
+    en: 'Starting Work, Transactions & First Meal',
+    date: new Date(2026, 3, 14, 12, 5), // April 14, 12:06 PM
+    displayDate: 'අප්‍රේල් 14 | April 14, 2026',
+    displayTime: 'ප.ව. 12:05 | 12:05 PM',
+    descSi: 'අප්‍රේල් මස 14 වන අඟහරුවාදා ප.ව. 12.05 ට රක්ත වර්ණ වස්ත්‍රාභරණයෙන් සැරසී දකුණු දිසාව බලා සියලු වැඩ අල්ලා ගනුදෙනු කොට ආහාර අනුභව කිරීම.',
+    descEn: 'At 12:05 PM on April 14, dressed in red clothing, facing south, begin work, conduct business transactions, and partake in the first meal of the New Year.',
+    colors: ['#cc3300'],
+    colorNames: ['රතු | Red']
+  },
+  {
+    id: 7,
+    icon: '🌿',
+    si: 'හිසතෙල් ගෑම',
+    en: 'Anointing with Oil (Hisatel Gaema)',
+    date: new Date(2026, 3, 15, 6, 54), // April 15, 6:55 AM
+    displayDate: 'අප්‍රේල් 15 | April 15, 2026',
+    displayTime: 'පෙ.ව. 6:54 | 6:54 AM',
+    descSi: 'අප්‍රේල් මස 15 වන බදාදා පූර්වභාග 6.54 ට පච්ච වර්ණ හෙවත් කොළ පැහැති වස්ත්‍රාභරණයෙන් සැරසී නැගෙනහිර දිශාව බලා හිසට කොහොඹ පත් ද පයට කොලොන් පත් ද තබා කොහොඹ පත් යුෂ මිශ්‍ර නානු හා තෙල් ගා ස්නානය කිරීම මැනවි.',
+    descEn: 'On Wednesday, April 15 at 6:54 AM, dressed in green garments, anoint the head with neem oil mixed with kola kenda, apply herbal preparations, and bathe with neem-infused water and herbs.',
+    colors: ['#2d7a2d'],
+    colorNames: ['කොළ | Green']
+  },
+  {
+    id: 8,
+    icon: '👑',
+    si: 'හදිසි රාජකාර සඳහා පිටත්ව යෑම',
+    en: 'Setting Out on First Journey',
+    date: new Date(2026, 3, 17, 5, 38), // April 17, 5:38 AM
+    displayDate: 'අප්‍රේල් 17 | April 17, 2026',
+    displayTime: 'පෙ.ව. 5:38 | 5:38 AM',
+    descSi: 'අප්‍රේල් මස 17 වන සිකුරාදා දින පූර්වභාග 05.38 ට රන්වන් පාට වස්ත්‍රාභරණයෙන් සැරසී දිිකිරි මිශ්‍ර කිරිබතක් ද හෙළ මෝරු ද උඳු මිශ්‍ර කැවිලි වර්ගයක් ද අනුභව කර උතුරු දිශාව බලා පිටත්ව යෑම මැනවි.',
+    descEn: 'On Friday, April 17 at 5:38 AM, dressed in golden/yellow garments, consume a traditional milk-based preparation, and set out in the northern direction for any important journey or royal/official duty.',
+    colors: ['#c8a000'],
+    colorNames: ['රන්වන් | Golden']
+  },
+  {
+    id: 9,
+    icon: '✍️',
+    si: 'රැකිරක්ෂා සඳහා පිටත්ව යෑම',
+    en: 'Setting Out for Livelihood',
+    date: new Date(2026, 3, 20, 6, 27), // April 20, 6:27 AM (first) and April 20, 6:50 AM (second)
+    displayDate: 'අප්‍රේල් 20 | April 20, 2026',
+    displayTime: 'පෙ.ව. 6:27 & 6:50 | 6:27 & 6:50 AM',
+    descSi: 'අප්‍රේල් මස 20 වන සඳුදා පූර්වභාග 06.27 ට ස්වේත වර්ණ වස්ත්‍රාභරණයෙන් සැරසී කිරිබතක් ද එළකිරි මිශ්‍ර කැවිලි වර්ගයක් ද අනුභව කර දකුණු දිශාව බලා හෝ, අප්‍රේල් මස 20 වන සඳුදා පූර්වභාග 06.50 ට මුතු හා ස්වේත වර්ණ වස්ත්‍රාභරණයෙන් සැරසී ගිතෙල් හා තල මිශ්‍ර කිරිබතක් ද දීකිරි සහ අග්ගලා සමග කැවිලි වර්ගයක් ද අනුභව කර නැගෙනහිර දිශාව බලා පිටත්ව යෑම මැනවි.',
+    descEn: 'April 20: At 6:27 AM, dressed in white, consume kiribath with elk milk preparations, facing south. At 6:50 AM, dressed in white with blue, consume kiribath with sesame and traditional sweets, and set out facing northeast for livelihood and occupation.',
+    colors: ['#ffffff', '#3366cc'],
+    colorNames: ['සුදු | White', 'නිල් | Blue']
+  },
+  {
+    id: 10,
+    icon: '🌾',
+    si: 'පැළ සිටුවීම',
+    en: 'First Planting (Pala Situvima)',
+    date: new Date(2026, 3, 23, 11, 36), // April 23, 9:01 AM
+    displayDate: 'අප්‍රේල් 23 | April 23, 2026',
+    displayTime: 'පෙ.ව. 11:36 | 11:36 AM',
+    descSi: 'අප්‍රේල් මස 23 වන බ්‍රහස්පතින්දා පූර්වභාග 11.36 ට රන්වන් පැහැති වස්ත්‍රාභරණයෙන් සැරසී උතුරු දිශාව බලා පැළ සිටුවීම මැනවි.',
+    descEn: 'On Thursday, April 23 at 11:36 AM, dressed in golden garments, facing north, perform the first planting of crops — a traditional ritual blessing the land and harvest for the new year.',
+    colors: ['#c8a000'],
+    colorNames: ['රන්වන් | Golden']
+  }
+];
+
+// ===================== UTILS =====================
+function pad(n) { return String(n).padStart(2,'0'); }
+
+function getCountdown(targetDate) {
+  const now = new Date();
+  const diff = targetDate - now;
+  if (diff <= 0) return null;
+  const days = Math.floor(diff / 86400000);
+  const hours = Math.floor((diff % 86400000) / 3600000);
+  const mins = Math.floor((diff % 3600000) / 60000);
+  const secs = Math.floor((diff % 60000) / 1000);
+  return { days, hours, mins, secs };
+}
+
+// ===================== HOME COUNTDOWN =====================
+const NY_DATE = new Date(2026, 3, 14, 9, 32); // April 14 9:32 AM
+
+function updateNYCountdown() {
+  const cd = getCountdown(NY_DATE);
+  if (!cd) {
+    document.getElementById('ny-days').textContent = '🎉';
+    document.getElementById('ny-hours').textContent = '';
+    document.getElementById('ny-mins').textContent = '';
+    document.getElementById('ny-secs').textContent = '';
+    return;
+  }
+  document.getElementById('ny-days').textContent = pad(cd.days);
+  document.getElementById('ny-hours').textContent = pad(cd.hours);
+  document.getElementById('ny-mins').textContent = pad(cd.mins);
+  document.getElementById('ny-secs').textContent = pad(cd.secs);
+}
+
+// ===================== RENDER CARDS =====================
+function renderCards() {
+  const grid = document.getElementById('nakath-grid');
+  grid.innerHTML = '';
+  nakath.forEach((n, i) => {
+    const cd = getCountdown(n.date);
+    let countdownHtml;
+    if (!cd) {
+      countdownHtml = `<div class="card-countdown-mini past">✓ ගතවී ඇත | Passed</div>`;
+    } else {
+      countdownHtml = `<div class="card-countdown-mini">⏱ ${pad(cd.days)}d ${pad(cd.hours)}h ${pad(cd.mins)}m ${pad(cd.secs)}s</div>`;
+    }
+
+    const colorDots = n.colors && n.colors.length
+      ? n.colors.map((c,j) => `<span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:${c};border:1px solid #ccc;margin-right:4px;" title="${n.colorNames[j]}"></span>`).join('')
+      : '';
+
+    const card = document.createElement('div');
+    card.className = 'nakath-card';
+    card.innerHTML = `
+      <div class="card-top">
+        <div class="card-number">${String(i+1).padStart(2,'0')}</div>
+        <div class="card-icon">${n.icon}</div>
+        <div class="card-title-si">${n.si}</div>
+        <div class="card-title-en">${n.en}</div>
+      </div>
+      <div class="card-body">
+        <div class="card-datetime"><span class="dt-icon">📅</span>${n.displayDate}${n.displayTime ? ' &nbsp;·&nbsp; ⏰ ' + n.displayTime : ''}</div>
+        <div class="card-countdown-mini-wrap" id="mini-cd-${n.id}">${countdownHtml}</div>
+        ${colorDots ? `<div style="margin-bottom:8px;font-size:0.8rem;color:#7a5020;">${colorDots} <span style="font-style:italic;">වස්ත්‍ර වර්ණ | Dress Colors</span></div>` : ''}
+        <div class="card-teaser">${n.descEn}</div>
+        <div class="card-arrow">View Full Details →</div>
+      </div>
+    `;
+    card.addEventListener('click', () => showDetail(n.id));
+    grid.appendChild(card);
+  });
+}
+
+// ===================== MINI COUNTDOWN UPDATE =====================
+function updateMiniCountdowns() {
+  nakath.forEach(n => {
+    const el = document.getElementById(`mini-cd-${n.id}`);
+    if (!el) return;
+    const cd = getCountdown(n.date);
+    if (!cd) {
+      el.innerHTML = `<div class="card-countdown-mini past">✓ ගතවී ඇත | Passed</div>`;
+    } else {
+      el.innerHTML = `<div class="card-countdown-mini">⏱ ${pad(cd.days)}d ${pad(cd.hours)}h ${pad(cd.mins)}m ${pad(cd.secs)}s</div>`;
+    }
+  });
+}
+
+// ===================== DETAIL PAGE =====================
+let detailInterval = null;
+let currentDetailId = null;
+
+function showDetail(id) {
+  const n = nakath.find(x => x.id === id);
+  currentDetailId = id;
+
+  document.getElementById('home-page').classList.remove('active');
+  document.getElementById('detail-page').classList.add('active');
+  window.scrollTo(0,0);
+
+  document.getElementById('d-icon').textContent = n.icon;
+  document.getElementById('d-title-si').textContent = n.si;
+  document.getElementById('d-title-en').textContent = n.en;
+  document.getElementById('d-date').textContent = n.displayDate;
+  document.getElementById('d-time').textContent = n.displayTime || '—';
+
+  // Dress colors info
+  let colorHtml = '';
+  if (n.colors && n.colors.length) {
+    colorHtml = `
+      <div class="detail-info-card">
+        <div class="info-section-title">🎨 වස්ත්‍ර වර්ණ <span class="en">| Recommended Dress Colors</span></div>
+        <div class="dress-colors">
+          ${n.colors.map((c,j) => `<span class="color-chip" style="background:${c};color:${getLightness(c)<128?'#fff':'#222'};border-color:${c};">${n.colorNames[j]}</span>`).join('')}
+        </div>
+      </div>
+    `;
+  }
+
+  document.getElementById('detail-info-area').innerHTML = `
+    <div class="detail-info-card">
+      <div class="info-section-title">📜 සිංහල විස්තරය <span class="en">| Sinhala Description</span></div>
+      <div class="detail-text-si">${n.descSi}</div>
+    </div>
+    <div class="detail-info-card">
+      <div class="info-section-title">📖 English Description</div>
+      <div class="detail-text-en">${n.descEn}</div>
+    </div>
+    ${colorHtml}
+    <div class="detail-info-card" style="text-align:center;">
+      <div style="font-family:'Noto Serif Sinhala',serif;font-size:0.95rem;color:var(--text-mid);">
+        📅 ${n.displayDate} ${n.displayTime ? '· ⏰ ' + n.displayTime : ''}
+      </div>
+      <div style="margin-top:12px;">
+        <button onclick="goHome()" style="background:var(--crimson-dark);color:var(--gold-light);border:none;padding:10px 28px;border-radius:40px;font-family:'Crimson Pro',serif;font-size:1rem;cursor:pointer;">
+          ← සියලු නැකැත් | All Nakath
+        </button>
+      </div>
+    </div>
+  `;
+
+  updateDetailCountdown(n);
+  if (detailInterval) clearInterval(detailInterval);
+  detailInterval = setInterval(() => updateDetailCountdown(n), 1000);
+}
+
+function getLightness(hex) {
+  const r = parseInt(hex.slice(1,3),16), g = parseInt(hex.slice(3,5),16), b = parseInt(hex.slice(5,7),16);
+  return (r*299 + g*587 + b*114) / 1000;
+}
+
+function updateDetailCountdown(n) {
+  const cd = getCountdown(n.date);
+  const grid = document.getElementById('detail-cd-grid');
+  const passed = document.getElementById('d-passed');
+  if (!cd) {
+    grid.style.display = 'none';
+    passed.style.display = 'block';
+  } else {
+    grid.style.display = 'flex';
+    passed.style.display = 'none';
+    document.getElementById('d-days').textContent = pad(cd.days);
+    document.getElementById('d-hours').textContent = pad(cd.hours);
+    document.getElementById('d-mins').textContent = pad(cd.mins);
+    document.getElementById('d-secs').textContent = pad(cd.secs);
+  }
+}
+
+function goHome() {
+  if (detailInterval) clearInterval(detailInterval);
+  document.getElementById('detail-page').classList.remove('active');
+  document.getElementById('home-page').classList.add('active');
+  window.scrollTo(0,0);
+}
+
+// ===================== INIT =====================
+renderCards();
+updateNYCountdown();
+
+setInterval(() => {
+  updateNYCountdown();
+  updateMiniCountdowns();
+}, 1000);
+</script>
+</body>
+</html>
